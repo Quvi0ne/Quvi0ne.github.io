@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lácteos Deliciosos - Empleados</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Gestión de Empleados</h1>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li class="active"><a href="empleados.html">Empleados</a></li>
+            <li><a href="tiendas.html">Tiendas</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section class="crud-section">
+            <h2>Operaciones con Empleados</h2>
+            
+            <div class="crud-actions">
+                <div class="form-group">
+                    <h3>Agregar Nuevo Empleado</h3>
+                    <input type="text" id="empleado-id" placeholder="ID de empleado" required>
+                    <input type="text" id="empleado-nombre" placeholder="Nombre completo">
+                    <input type="text" id="empleado-puesto" placeholder="Puesto">
+                    <input type="text" id="empleado-tienda" placeholder="ID de tienda asignada">
+                    <input type="email" id="empleado-email" placeholder="Correo electrónico">
+                    <button onclick="agregarEmpleado()" class="btn">Guardar Empleado</button>
+                    <p id="empleado-mensaje" class="mensaje"></p>
+                </div>
+
+                <div class="form-group">
+                    <h3>Buscar Empleado</h3>
+                    <input type="text" id="buscar-empleado" placeholder="ID o nombre del empleado">
+                    <button onclick="buscarEmpleado()" class="btn">Buscar</button>
+                    <div id="resultado-busqueda-empleado"></div>
+                </div>
+
+                <div class="form-group">
+                    <h3>Eliminar Empleado</h3>
+                    <input type="text" id="eliminar-empleado" placeholder="ID del empleado a eliminar">
+                    <button onclick="eliminarEmpleado()" class="btn btn-eliminar">Eliminar</button>
+                    <p id="eliminar-mensaje-empleado" class="mensaje"></p>
+                </div>
+            </div>
+
+            <div class="listado">
+                <h3>Listado de Empleados</h3>
+                <div id="lista-empleados" class="lista-items"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Sistema de gestión para Lácteos Deliciosos &copy; 2023</p>
+    </footer>
+    <script src="empleados.js"></script>
+</body>
+</html>

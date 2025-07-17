@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lácteos Deliciosos - Tiendas</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Gestión de Tiendas</h1>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="empleados.html">Empleados</a></li>
+            <li class="active"><a href="tiendas.html">Tiendas</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section class="crud-section">
+            <h2>Operaciones con Tiendas</h2>
+            
+            <div class="crud-actions">
+                <div class="form-group">
+                    <h3>Agregar Nueva Tienda</h3>
+                    <input type="text" id="tienda-id" placeholder="ID de tienda" required>
+                    <input type="text" id="tienda-nombre" placeholder="Nombre de la tienda">
+                    <input type="text" id="tienda-direccion" placeholder="Dirección">
+                    <input type="text" id="tienda-telefono" placeholder="Teléfono">
+                    <input type="text" id="tienda-horario" placeholder="Horario de atención">
+                    <button onclick="agregarTienda()" class="btn">Guardar Tienda</button>
+                    <p id="tienda-mensaje" class="mensaje"></p>
+                </div>
+
+                <div class="form-group">
+                    <h3>Buscar Tienda</h3>
+                    <input type="text" id="buscar-tienda" placeholder="ID o nombre de la tienda">
+                    <button onclick="buscarTienda()" class="btn">Buscar</button>
+                    <div id="resultado-busqueda-tienda"></div>
+                </div>
+
+                <div class="form-group">
+                    <h3>Eliminar Tienda</h3>
+                    <input type="text" id="eliminar-tienda" placeholder="ID de la tienda a eliminar">
+                    <button onclick="eliminarTienda()" class="btn btn-eliminar">Eliminar</button>
+                    <p id="eliminar-mensaje-tienda" class="mensaje"></p>
+                </div>
+            </div>
+
+            <div class="listado">
+                <h3>Listado de Tiendas</h3>
+                <div id="lista-tiendas" class="lista-items"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Sistema de gestión para Lácteos Deliciosos &copy; 2025</p>
+    </footer>
+
+    <script src="tiendas.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lácteos Deliciosos - Productos</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Gestión de Productos Lácteos</h1>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li class="active"><a href="productos.html">Productos</a></li>
+            <li><a href="empleados.html">Empleados</a></li>
+            <li><a href="tiendas.html">Tiendas</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section class="crud-section">
+            <h2>Operaciones con Productos</h2>
+            
+            <div class="crud-actions">
+                <div class="form-group">
+                    <h3>Agregar Nuevo Producto</h3>
+                    <input type="text" id="producto-nombre" placeholder="Nombre del producto" required>
+                    <input type="text" id="producto-tipo" placeholder="Tipo (leche, queso, yogurt, etc.)">
+                    <input type="number" id="producto-precio" placeholder="Precio" step="0.01">
+                    <input type="number" id="producto-stock" placeholder="Cantidad en stock">
+                    <input type="text" id="producto-codigo" placeholder="Código único">
+                    <button onclick="agregarProducto()" class="btn">Guardar Producto</button>
+                    <p id="producto-mensaje" class="mensaje"></p>
+                </div>
+
+                <div class="form-group">
+                    <h3>Buscar Producto</h3>
+                    <input type="text" id="buscar-producto" placeholder="Nombre o código del producto">
+                    <button onclick="buscarProducto()" class="btn">Buscar</button>
+                    <div id="resultado-busqueda-producto"></div>
+                </div>
+
+                <div class="form-group">
+                    <h3>Eliminar Producto</h3>
+                    <input type="text" id="eliminar-producto" placeholder="Código del producto a eliminar">
+                    <button onclick="eliminarProducto()" class="btn btn-eliminar">Eliminar</button>
+                    <p id="eliminar-mensaje-producto" class="mensaje"></p>
+                </div>
+            </div>
+
+            <div class="listado">
+                <h3>Listado de Productos</h3>
+                <div id="lista-productos" class="lista-items"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Sistema de gestión para Lácteos Deliciosos &copy; 2025</p>
+    </footer>
+
+    <script src="productos.js"></script>
+</body>
+</html>
